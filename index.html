@@ -10,6 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="src/css/styles.css">
 </head>
 	
@@ -375,9 +376,6 @@
       <p>Design autoral · Feito em Balneário Camboriú, SC</p>
     </div>
   </footer>
-	<a href="#topo" class="btn-topo">
-  	 <i class="mdi mdi-arrow-up"></i>
-	</a>
 
   <!-- ============================================================
        MODAIS DE PRODUTO — técnica CSS :target
@@ -387,9 +385,9 @@
 
   <!-- Modal: Lavanda & Cedro -->
   <div class="modal-backdrop" id="modal-v1" role="dialog" aria-modal="true" aria-label="Lavanda & Cedro">
-    <a href="#" class="modal-backdrop" style="position:fixed;inset:0;z-index:-1;" aria-label="Fechar modal"></a>
+    <a href="#velas" class="overlay-close" aria-label="Fechar modal"></a>
     <div class="modal">
-      <a href="#" class="modal-close" aria-label="Fechar">×</a>
+      <a href="#velas" class="modal-close" aria-label="Fechar"><i class="fa-solid fa-xmark"></i></a>
       <div class="modal-img">
         	<img src="src/images/vela_lavanda.png" alt="Uma vela em pote lilás dentro de uma caixa de presente, decorada com ramos de lavanda seca e palitos de fósforo ao lado." />
       </div>
@@ -412,9 +410,9 @@
 
   <!-- Modal: Vanilla & Baunilha -->
   <div class="modal-backdrop" id="modal-v2" role="dialog" aria-modal="true" aria-label="Vanilla & Baunilha">
-    <a href="#" class="modal-backdrop" style="position:fixed;inset:0;z-index:-1;" aria-label="Fechar modal"></a>
+    <a href="#velas" class="overlay-close" aria-label="Fechar modal"></a>
     <div class="modal">
-      <a href="#" class="modal-close" aria-label="Fechar">×</a>
+      <a href="#velas" class="modal-close" aria-label="Fechar"><i class="fa-solid fa-xmark"></i></a>
       <div class="modal-img" style="background:#f5eee6;">
         	<img src="src/images/vela_baunilha.png" alt="Uma vela em copo de vidro âmbar sobre uma prateleira de madeira rústica, ao lado de sua embalagem de papelão com design geométrico." />
       </div>
@@ -437,9 +435,9 @@
 
   <!-- Modal: Eucalipto & Menta -->
   <div class="modal-backdrop" id="modal-v3" role="dialog" aria-modal="true" aria-label="Eucalipto & Menta">
-    <a href="#" class="modal-backdrop" style="position:fixed;inset:0;z-index:-1;" aria-label="Fechar modal"></a>
+    <a href="#velas" class="overlay-close" aria-label="Fechar modal"></a>
     <div class="modal">
-      <a href="#" class="modal-close" aria-label="Fechar">×</a>
+      <a href="#velas" class="modal-close" aria-label="Fechar"><i class="fa-solid fa-xmark"></i></a>
       <div class="modal-img" style="background:#eef2f0;">
         	<img src="src/images/vela_eucalipto.png" alt="Uma vela aromática em um pote de cerâmica verde musgo, com rótulo minimalista da marca "dage"." />
       </div>
@@ -462,9 +460,9 @@
 
   <!-- Modal: Corrida Azul -->
   <div class="modal-backdrop" id="modal-a1" role="dialog" aria-modal="true" aria-label="Camiseta Corrida Azul">
-    <a href="#" class="modal-backdrop" style="position:fixed;inset:0;z-index:-1;" aria-label="Fechar modal"></a>
+    <a href="#vestuario" class="overlay-close" aria-label="Fechar modal"></a>
     <div class="modal">
-      <a href="#" class="modal-close" aria-label="Fechar">×</a>
+      <a href="#vestuario" class="modal-close" aria-label="Fechar"><i class="fa-solid fa-xmark"></i></a>
       <div class="modal-img" style="background:#dce8f0;">
         	<img src="src/images/camiseta_corrida_branca.png" alt="Camiseta branca com a estampa "DAGE CLUB alta pace" em tons de verde oliva e uma frase motivacional em letras menores." />
       </div>
@@ -487,9 +485,9 @@
 
   <!-- Modal: Corrida Preta -->
   <div class="modal-backdrop" id="modal-a2" role="dialog" aria-modal="true" aria-label="Camiseta Corrida Preta">
-    <a href="#" class="modal-backdrop" style="position:fixed;inset:0;z-index:-1;" aria-label="Fechar modal"></a>
+    <a href="#vestuario" class="overlay-close" aria-label="Fechar modal"></a>
     <div class="modal">
-      <a href="#" class="modal-close" aria-label="Fechar">×</a>
+      <a href="#vestuario" class="modal-close" aria-label="Fechar"><i class="fa-solid fa-xmark"></i></a>
       <div class="modal-img" style="background:#2c2c2a;">
         	<img src="src/images/camiseta_corrida_preta.png" alt="Uma camiseta preta com a palavra "DAGE" em letras grandes e rosa, acompanhada pelo subtítulo "ALTA PACE RUNNERS"." />
       </div>
@@ -512,9 +510,9 @@
 
   <!-- Modal: Adesivos Dage -->
   <div class="modal-backdrop" id="modal-a3" role="dialog" aria-modal="true" aria-label="Adesivos Dage">
-    <a href="#" class="modal-backdrop" style="position:fixed;inset:0;z-index:-1;" aria-label="Fechar modal"></a>
+    <a href="#vestuario" class="overlay-close" aria-label="Fechar modal"></a>
     <div class="modal">
-      <a href="#" class="modal-close" aria-label="Fechar">×</a>
+      <a href="#vestuario" class="modal-close" aria-label="Fechar"><i class="fa-solid fa-xmark"></i></a>
       <div class="modal-img">
         	<img src="src/images/adesivos.avif" alt="Cartela de adesivos em tons de rosa e vermelho com a frase "Jesus loves you!" (Jesus ama você) dentro de ilustrações de envelopes e corações." />
       </div>
@@ -537,9 +535,9 @@
 
   <!-- Modal: Chaveiros -->
   <div class="modal-backdrop" id="modal-a4" role="dialog" aria-modal="true" aria-label="Bucket Hat Dage">
-    <a href="#" class="modal-backdrop" style="position:fixed;inset:0;z-index:-1;" aria-label="Fechar modal"></a>
+    <a href="#vestuario" class="overlay-close" aria-label="Fechar modal"></a>
     <div class="modal">
-      <a href="#" class="modal-close" aria-label="Fechar">×</a>
+      <a href="#vestuario" class="modal-close" aria-label="Fechar"><i class="fa-solid fa-xmark"></i></a>
       <div class="modal-img">
         	<img src="src/images/chaveiros.jpg" alt="Diversos chaveiros de metal dourado com pingentes em formato de coração e gota, apresentando estampas de flores, animais e padrões abstratos." />
       </div>
@@ -562,9 +560,9 @@
 
   <!-- Modal: Calendário -->
   <div class="modal-backdrop" id="modal-p1" role="dialog" aria-modal="true" aria-label="Calendário Organizador 2025">
-    <a href="#" class="modal-backdrop" style="position:fixed;inset:0;z-index:-1;" aria-label="Fechar modal"></a>
+    <a href="#papelaria" class="overlay-close" aria-label="Fechar modal"></a>
     <div class="modal">
-      <a href="#" class="modal-close" aria-label="Fechar">×</a>
+      <a href="#papelaria" class="modal-close" aria-label="Fechar"><i class="fa-solid fa-xmark"></i></a>
       <div class="modal-img" style="background:#eeedfd;">
         	<img src="src/images/agenda.jpg" alt="Uma mão segurando cartões de um calendário ou agenda mensal, cada um com uma ilustração artística e colorida diferente." />
       </div>
@@ -587,9 +585,9 @@
 
   <!-- Modal: Bloco de Notas -->
   <div class="modal-backdrop" id="modal-p2" role="dialog" aria-modal="true" aria-label="Bloco de Notas Dage">
-    <a href="#" class="modal-backdrop" style="position:fixed;inset:0;z-index:-1;" aria-label="Fechar modal"></a>
+    <a href="#papelaria" class="overlay-close" aria-label="Fechar modal"></a>
     <div class="modal">
-      <a href="#" class="modal-close" aria-label="Fechar">×</a>
+      <a href="#papelaria" class="modal-close" aria-label="Fechar"><i class="fa-solid fa-xmark"></i></a>
       <div class="modal-img">
         	<img src="src/images/bloco_de_anotacao.jpg" alt="Dois cadernos de anotações (planners) sobre uma mesa de madeira. Um tem capa amarela com flores e o outro é rosa com ilustrações de xícaras de café." />
       </div>
@@ -612,9 +610,11 @@
 
   <!-- Modal: Kit Cartão + Envelope -->
   <div class="modal-backdrop" id="modal-p3" role="dialog" aria-modal="true" aria-label="Kit Cartão + Envelope">
-    <a href="#" class="modal-backdrop" style="position:fixed;inset:0;z-index:-1;" aria-label="Fechar modal"></a>
+		
+    <a href="#papelaria" class="overlay-close" aria-label="Fechar modal"></a>
+		
     <div class="modal">
-      <a href="#" class="modal-close" aria-label="Fechar">×</a>
+      <a href="#papelaria" class="modal-close" aria-label="Fechar"><i class="fa-solid fa-xmark"></i></a>
       <div class="modal-img" style="background:#1a1917;">
         	<img src="src/images/cartao_envelope.jpg" alt="Conjunto de papelaria fina com ilustrações botânicas (tulipas e flores brancas) em tons de verde e rosa suave." />
       </div>
@@ -643,12 +643,12 @@
   ============================================================ -->
   <div id="sacola" role="dialog" aria-modal="true" aria-label="Sacola de compras">
     <!-- Backdrop: clique fora fecha -->
-    <a href="#" style="position:fixed;inset:0;z-index:-1;" aria-label="Fechar sacola"></a>
+    <a href="#" class="overlay-close" aria-label="Fechar sacola"></a>
 
     <div class="sacola-panel">
       <div class="sacola-header">
         <h2 class="sacola-header-title">Sacola</h2>
-        <a href="#" class="sacola-close" aria-label="Fechar">×</a>
+        <a href="#" class="modal-close" aria-label="Fechar"><i class="fa-solid fa-xmark"></i></a>
       </div>
 
       <div class="sacola-list">
@@ -698,6 +698,8 @@
       </div>
     </div>
   </div>
-	
+	<a href="#topo" class="btn-topo">
+  	 <i class="mdi mdi-arrow-up"></i>
+	</a>
 </body>
 </html>
