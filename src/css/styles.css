@@ -362,12 +362,12 @@
       position: relative;
     }
 
-	.card-img img, .modal-img img {
-	  width: 100%;
-	  height: 100%;
-	  object-fit: cover; /* Faz a imagem cobrir tudo sem esticar */
-	  object-position: center; /* Centraliza o foco da foto */
-	}
+		.card-img img, .modal-img img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover; /* Faz a imagem cobrir tudo sem esticar */
+			object-position: center; /* Centraliza o foco da foto */
+		}
 
     .card-img.tall   { aspect-ratio: 3 / 4; }
     .card-img.square { aspect-ratio: 1 / 1; }
@@ -457,16 +457,16 @@
       gap: 1.5rem;
     }
  */
-	.grid-velas {
-	  display: grid;
-	  grid-template-columns: repeat(3, 1fr); /* Cria 3 colunas de 1 fração cada */
-	  gap: 1.5rem;
-	  align-items: start;
-	}
+		.grid-velas {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr); /* Cria 3 colunas de 1 fração cada */
+			gap: 1.5rem;
+			align-items: start;
+		}
 
-	.grid-velas .card-img {
-	  aspect-ratio: 1 / 1; 
-	}
+		.grid-velas .card-img {
+			aspect-ratio: 1 / 1; 
+		}
 
     /* ============================================================
        GRID — VESTUÁRIO (4 colunas iguais)
@@ -500,7 +500,7 @@
       display: none;
       position: fixed;
       inset: 0;
-      z-index: 300;
+      z-index: 400;
       background: rgba(26, 25, 23, 0.65);
       backdrop-filter: blur(4px);
       align-items: center;
@@ -510,6 +510,14 @@
     .modal-backdrop:target {
       display: flex;
     }
+
+		/* O link invisível que ocupa a tela toda */
+		.overlay-close {
+			position: fixed;
+			inset: 0;
+			z-index: 401; /* Fica logo acima do fundo */
+			cursor: default;
+		}
 
     /* Caixa do modal */
     .modal {
@@ -521,6 +529,7 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
       position: relative;
+			z-index: 402;
     }
 
     /* Visual do produto dentro do modal */
@@ -637,6 +646,7 @@
       overflow-y: auto;
       display: flex;
       flex-direction: column;
+			z-index: 402;
     }
 
     .sacola-header {
@@ -969,6 +979,12 @@
 		.btn-topo:hover {
 			background-color: var(--amber);
     	transform: translateY(-5px);
+		}
+
+		.modal-backdrop[aria-modal="true"]:target ~ .btn-topo {
+				opacity: 0;
+				pointer-events: none; /* Impede que o usuário clique no botão invisível */
+				transition: opacity 0.3s ease;
 		}
 
     /* ============================================================
