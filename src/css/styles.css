@@ -33,7 +33,7 @@
     }
 
     html {
-      scroll-behavior: smooth; /* âncoras deslizam suavemente */
+      scroll-behavior: smooth !important; /* âncoras deslizam suavemente */
     }
 
     body {
@@ -138,15 +138,15 @@
       padding-top: 64px;
     }
 
-	.hero-text {
-	  display: flex;
-	  flex-direction: column;
-	  justify-content: center; /* Centraliza verticalmente */
-	  align-items: center;     /* Centraliza horizontalmente */
-	  padding: 5rem 3rem;
-	  text-align: center;      
-	  height: 100%;            /* Garante que ocupe a altura total do grid */
-	}
+		.hero-text {
+			display: flex;
+			flex-direction: column;
+			justify-content: center; /* Centraliza verticalmente */
+			align-items: center;     /* Centraliza horizontalmente */
+			padding: 5rem 3rem;
+			text-align: center;      
+			height: 100%;            /* Garante que ocupe a altura total do grid */
+		}
 
     .eyebrow {
       font-size: 11px;
@@ -944,6 +944,32 @@
       color: rgba(245, 242, 236, 0.2);
     }
 
+		.btn-topo {
+		  position: fixed;
+			bottom: 30px;
+			right: 30px;
+			width: 45px;
+			height: 45px;
+			background-color: var(--amber-l);
+			color: white;
+			border-radius: 50%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			text-decoration: none;
+			z-index: 2000;
+			transition: transform 0.3s ease, color 0.3s ease;
+		}
+
+		.btn-topo .mdi-arrow-up {
+			font-size: 25px;
+			color: var(--black);
+		}
+
+		.btn-topo:hover {
+			background-color: var(--amber);
+    	transform: translateY(-5px);
+		}
 
     /* ============================================================
        ANIMAÇÕES CSS
@@ -980,6 +1006,7 @@
 
       /* Hero: empilha verticalmente */
       .hero {
+        grid-template-columns: 1fr;
         min-height: auto;
       }
       .hero-text { padding: 3rem 1.5rem 2rem; }
