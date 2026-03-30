@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lojinha Dage — Design Autoral</title>
+  <link rel="icon" type="src/image/png" href="src/images/favicon.png">
+  <!-- Fontes: Cormorant Garamond (serif elegante) + DM Sans (corpo limpo) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="src/css/styles.css">
+</head>
+<body>
+
+
+  <!-- ============================================================
+       NAVEGAÇÃO
+       Links com âncoras HTML puras (#velas, #vestuario, etc.)
+       Sacola abre modal via âncora #sacola.
+  ============================================================ -->
+	<nav class="nav">
+	  <a href="#" class="nav-logo">
+		<span class="nav-logo-main">dage</span>
+		<span class="nav-logo-sub">lojinha</span>
+	  </a>
+
+	  <ul class="nav-links">
+		<li><a href="#velas">Velas</a></li>
+		<li><a href="#vestuario">Vestuário</a></li>
+		<li><a href="#papelaria">Papelaria</a></li>
+		<li><a href="#sobre">Sobre</a></li>
+	  </ul>
+
+	  <a href="#sacola" class="nav-sacola">
+		<span class="sacola-icon">3</span>
+		Sacola
+	  </a>
+	</nav>
+
+  <!-- ============================================================
+       HERO
+  ============================================================ -->
+  <section class="hero" id="inicio">
+
+  <div class="hero-text">
+    <p class="eyebrow">Design autoral · Feito à mão</p>
+
+    <h1 class="hero-title">
+      Objetos com<br>
+      <em>identidade</em><br>
+      própria.
+    </h1>
+
+    <p class="hero-desc">
+      Velas aromáticas, camisetas de corrida, adesivos e papelaria — cada peça nasce do mesmo lugar: a obsessão por design que diz algo de verdade.
+    </p>
+
+    <div class="hero-actions">
+      <a href="#velas" class="btn-primary">Ver coleção →</a>
+      <a href="#sobre" class="btn-ghost">Sobre a marca</a>
+    </div>
+  </div>
+</section>
+
+
+  <!-- ============================================================
+       STRIP MARQUEE
+  ============================================================ -->
+  <div class="strip" aria-hidden="true">
+    <div class="strip-track">
+      <!-- Cópia 1 -->
+      <span class="strip-item"><span class="strip-dot"></span>Frete grátis acima de R$ 150</span>
+      <span class="strip-item"><span class="strip-dot"></span>Produção artesanal sob encomenda</span>
+      <span class="strip-item"><span class="strip-dot"></span>Design 100% autoral</span>
+      <span class="strip-item"><span class="strip-dot"></span>Entrega para todo o Brasil</span>
+      <span class="strip-item"><span class="strip-dot"></span>Identidade visual exclusiva</span>
+      <!-- Cópia 2 — necessária para o loop ser contínuo -->
+      <span class="strip-item"><span class="strip-dot"></span>Frete grátis acima de R$ 150</span>
+      <span class="strip-item"><span class="strip-dot"></span>Produção artesanal sob encomenda</span>
+      <span class="strip-item"><span class="strip-dot"></span>Design 100% autoral</span>
+      <span class="strip-item"><span class="strip-dot"></span>Entrega para todo o Brasil</span>
+      <span class="strip-item"><span class="strip-dot"></span>Identidade visual exclusiva</span>
+    </div>
+  </div>
+
+
+  <!-- ============================================================
+       SEÇÃO VELAS
+       id="velas" é a âncora do menu.
+  ============================================================ -->
+  <section class="section" id="velas">
+    <div class="section-header">
+      <h2 class="section-title">Velas <em>aromáticas</em></h2>
+      <a href="#velas" class="see-all">Ver todas</a>
+    </div>
+
+    <div class="grid-velas">
+
+      <!-- Produto destaque (grande) -->
+      <a href="#modal-v1" class="product-card">
+        <div class="card-img tall" style="background:#f0ece3;">
+		  <img src="src/images/vela_lavanda.png" alt="Uma vela em pote lilás dentro de uma caixa de presente, decorada com ramos de lavanda seca e palitos de fósforo ao lado." />
+          <div class="card-overlay">
+            <span class="card-cta">Ver produto</span>
+          </div>
+        </div>
+        <div class="card-info">
+          <div class="card-bar" style="background:var(--amber);"></div>
+          <p class="card-cat">Vela aromática · 200g</p>
+          <p class="card-name">Lavanda &amp; Cedro</p>
+          <p class="card-price">R$ 49,00</p>
+        </div>
+      </a>
+
+      <!-- Coluna direita: 2 produtos menores -->
+<!--       <div class="grid-velas-col"> -->
+
+        <a href="#modal-v2" class="product-card">
+          <div class="card-img square" style="background:#f5eee6;">
+            <img src="src/images/vela_baunilha.png" alt="Uma vela em copo de vidro âmbar sobre uma prateleira de madeira rústica, ao lado de sua embalagem de papelão com design geométrico." />
+            <div class="card-overlay">
+              <span class="card-cta">Ver produto</span>
+            </div>
+          </div>
+          <div class="card-info">
+            <div class="card-bar" style="background:var(--amber);"></div>
+            <p class="card-cat">Vela aromática · 150g</p>
+            <p class="card-name">Vanilla &amp; Baunilha</p>
+            <p class="card-price">R$ 39,00</p>
+          </div>
+        </a>
+
+        <a href="#modal-v3" class="product-card">
+          <div class="card-img square" style="background:#eef2f0;">
+            <img src="src/images/vela_eucalipto.png" alt="Uma vela aromática em um pote de cerâmica verde musgo, com rótulo minimalista da marca "dage"." />
+            <div class="card-overlay">
+              <span class="card-cta">Ver produto</span>
+            </div>
+          </div>
+          <div class="card-info">
+            <div class="card-bar" style="background:var(--blue);"></div>
+            <p class="card-cat">Vela aromática · 150g</p>
+            <p class="card-name">Eucalipto &amp; Menta</p>
+            <p class="card-price">R$ 39,00</p>
+          </div>
+        </a>
+
+<!--       </div> -->
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       SEÇÃO VESTUÁRIO
+  ============================================================ -->
+  <section class="section section-alt" id="vestuario">
+    <div class="section-header">
+      <h2 class="section-title">Vestuário <em>&amp; adesivos</em></h2>
+      <a href="#vestuario" class="see-all">Ver todos</a>
+    </div>
+
+    <div class="grid-apparel">
+
+      <a href="#modal-a1" class="product-card">
+        <div class="card-img tall" style="background:#dce8f0;">
+         	<img src="src/images/camiseta_corrida_branca.png" alt="Camiseta branca com a estampa "DAGE CLUB alta pace" em tons de verde oliva e uma frase motivacional em letras menores." />
+          <div class="card-overlay">
+            <span class="card-cta">Ver produto</span>
+          </div>
+        </div>
+        <div class="card-info">
+          <div class="card-bar" style="background:var(--blue);"></div>
+          <p class="card-cat">Camiseta · Running Club</p>
+          <p class="card-name">Corrida Branca</p>
+          <p class="card-price">R$ 89,00</p>
+        </div>
+      </a>
+
+      <a href="#modal-a2" class="product-card">
+        <div class="card-img tall" style="background:#1a1917;">
+          	<img src="src/images/camiseta_corrida_preta.png" alt="Uma camiseta preta com a palavra "DAGE" em letras grandes e rosa, acompanhada pelo subtítulo "ALTA PACE RUNNERS"." />
+          <div class="card-overlay">
+            <span class="card-cta">Ver produto</span>
+          </div>
+        </div>
+        <div class="card-info">
+          <div class="card-bar"></div>
+          <p class="card-cat">Camiseta · Running Club</p>
+          <p class="card-name">Corrida Preta</p>
+          <p class="card-price">R$ 89,00</p>
+        </div>
+      </a>
+
+      <a href="#modal-a3" class="product-card">
+        <div class="card-img tall" style="background:#f5f2ec;">
+         	<img src="src/images/adesivos.avif" alt="Cartela de adesivos em tons de rosa e vermelho com a frase "Jesus loves you!" (Jesus ama você) dentro de ilustrações de envelopes e corações." />
+          <div class="card-overlay">
+            <span class="card-cta">Ver produto</span>
+          </div>
+        </div>
+        <div class="card-info">
+          <div class="card-bar" style="background:var(--lilac);"></div>
+          <p class="card-cat">Adesivos · Pack com 3</p>
+          <p class="card-name">Adesivos Dage</p>
+          <p class="card-price">R$ 18,00</p>
+        </div>
+      </a>
+
+      <a href="#modal-a4" class="product-card">
+        <div class="card-img tall" style="background:#f0ece3;">
+          	<img src="src/images/chaveiros.jpg" alt="Diversos chaveiros de metal dourado com pingentes em formato de coração e gota, apresentando estampas de flores, animais e padrões abstratos." />
+          <div class="card-overlay">
+            <span class="card-cta">Ver produto</span>
+          </div>
+        </div>
+        <div class="card-info">
+          <div class="card-bar"></div>
+          <p class="card-cat">Acessório · Estilo</p>
+          <p class="card-name">Chaveiros</p>
+          <p class="card-price">R$ 65,00</p>
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       SEÇÃO PAPELARIA
+  ============================================================ -->
+  <section class="section" id="papelaria">
+    <div class="section-header">
+      <h2 class="section-title"><em>Papelaria</em> autoral</h2>
+      <a href="#papelaria" class="see-all">Ver toda</a>
+    </div>
+
+    <div class="grid-stationery">
+
+      <a href="#modal-p1" class="product-card">
+        <div class="card-img tall" style="background:#eeedfd;">
+          	<img src="src/images/agenda.jpg" alt="Uma mão segurando cartões de um calendário ou agenda mensal, cada um com uma ilustração artística e colorida diferente." />
+          <div class="card-overlay">
+            <span class="card-cta">Ver produto</span>
+          </div>
+        </div>
+        <div class="card-info">
+          <div class="card-bar" style="background:var(--lilac);"></div>
+          <p class="card-cat">Papelaria · Calendário</p>
+          <p class="card-name">Calendário Organizador 2025</p>
+          <p class="card-price">R$ 35,00</p>
+        </div>
+      </a>
+
+      <a href="#modal-p2" class="product-card">
+        <div class="card-img tall" style="background:#f5f2ec;">
+          	<img src="src/images/bloco_de_anotacao.jpg" alt="Dois cadernos de anotações (planners) sobre uma mesa de madeira. Um tem capa amarela com flores e o outro é rosa com ilustrações de xícaras de café." />
+          <div class="card-overlay">
+            <span class="card-cta">Ver produto</span>
+          </div>
+        </div>
+        <div class="card-info">
+          <div class="card-bar" style="background:var(--amber);"></div>
+          <p class="card-cat">Papelaria · Bloco</p>
+          <p class="card-name">Bloco de Notas Dage</p>
+          <p class="card-price">R$ 22,00</p>
+        </div>
+      </a>
+
+      <a href="#modal-p3" class="product-card">
+        <div class="card-img tall" style="background:#1a1917;">
+          	<img src="src/images/cartao_envelope.jpg" alt="Conjunto de papelaria fina com ilustrações botânicas (tulipas e flores brancas) em tons de verde e rosa suave." />
+          <div class="card-overlay">
+            <span class="card-cta">Ver produto</span>
+          </div>
+        </div>
+        <div class="card-info">
+          <div class="card-bar" style="background:var(--amber);"></div>
+          <p class="card-cat">Papelaria · Cartão</p>
+          <p class="card-name">Kit Cartão + Envelope</p>
+          <p class="card-price">R$ 28,00</p>
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       SOBRE
+  ============================================================ -->
+  <section class="about" id="sobre">
+    <div>
+      <p class="about-eyebrow">Sobre a Dage</p>
+      <h2 class="about-title">Design que<br><em>existe</em> fora<br>da tela.</h2>
+      <p class="about-text">
+        A Lojinha Dage nasceu da vontade de um designer gráfico de levar seu trabalho para o mundo real — em objetos que carregam identidade, intenção e cuidado em cada detalhe.
+      </p>
+      <p class="about-text">
+        Das velas aromáticas com embalagem autoral até as camisetas do clube de corrida, cada produto é criado do zero: do conceito à entrega.
+      </p>
+      <div class="about-values">
+        <div>
+          <p class="about-value-num">100%</p>
+          <p class="about-value-label">Design autoral</p>
+        </div>
+        <div>
+          <p class="about-value-num">Feito</p>
+          <p class="about-value-label">à mão com cuidado</p>
+        </div>
+        <div>
+          <p class="about-value-num">SC</p>
+          <p class="about-value-label">Balneário Camboriú · Brasil</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="about-visual">
+      	<img src="src/images/logo_dage.png" alt="Um fundo preto sólido com o nome da marca "dage" escrito centralizado em fonte serifada branca e minúscula." />
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       NEWSLETTER
+  ============================================================ -->
+  <section class="newsletter">
+    <p class="newsletter-eyebrow">Fique por dentro</p>
+    <h2 class="newsletter-title">Novidades em primeira mão.</h2>
+    <p class="newsletter-sub">Lançamentos, promoções e bastidores do processo criativo.</p>
+    <form class="newsletter-form" action="#" method="post">
+      <input type="email" placeholder="seu@email.com" aria-label="Seu e-mail" />
+      <button type="submit">Assinar</button>
+    </form>
+  </section>
+
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <p class="footer-brand">dage</p>
+        <p class="footer-desc">Objetos com identidade própria, criados com design autoral e feitos à mão em Balneário Camboriú, SC.</p>
+      </div>
+      <div>
+        <p class="footer-col-title">Loja</p>
+        <ul class="footer-links">
+          <li><a href="#velas">Velas aromáticas</a></li>
+          <li><a href="#vestuario">Vestuário</a></li>
+          <li><a href="#papelaria">Papelaria</a></li>
+          <li><a href="#vestuario">Adesivos</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-col-title">Informações</p>
+        <ul class="footer-links">
+          <li><a href="#sobre">Sobre a Dage</a></li>
+          <li><a href="#">Trocas e devoluções</a></li>
+          <li><a href="#">Frete e entrega</a></li>
+          <li><a href="#">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-col-title">Contato</p>
+        <ul class="footer-links">
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">WhatsApp</a></li>
+          <li><a href="#">E-mail</a></li>
+          <li><a href="#">Encomendas</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Lojinha Dage. Todos os direitos reservados.</p>
+      <p>Design autoral · Feito em Balneário Camboriú, SC</p>
+    </div>
+  </footer>
+
+
+  <!-- ============================================================
+       MODAIS DE PRODUTO — técnica CSS :target
+       Estrutura: div.modal-backdrop com id único.
+       Abrir: <a href="#modal-id">.  Fechar: <a href="#">.
+  ============================================================ -->
+
+  <!-- Modal: Lavanda & Cedro -->
+  <div class="modal-backdrop" id="modal-v1" role="dialog" aria-modal="true" aria-label="Lavanda & Cedro">
+    <a href="#" class="modal-backdrop" style="position:fixed;inset:0;z-index:-1;" aria-label="Fechar modal"></a>
+    <div class="modal">
+      <a href="#" class="modal-close" aria-label="Fechar">×</a>
+      <div class="modal-img">
+        	<img src="src/images/vela_lavanda.png" alt="Uma vela em pote lilás dentro de uma caixa de presente, decorada com ramos de lavanda seca e palitos de fósforo ao lado." />
+      </div>
+      <div class="modal-body">
+        <p class="modal-cat">Vela aromática · 200g</p>
+        <h2 class="modal-title">Lavanda &amp; Cedro</h2>
+        <p class="modal-price">R$ 49,00</p>
+        <p class="modal-desc">Uma vela de presença suave e duradoura. A lavanda traz calma, enquanto o cedro adiciona uma base amadeirada e sofisticada. Embalagem com identidade visual autoral Dage.</p>
+        <p class="modal-detail">
+          <strong>Peso:</strong> 200g<br>
+          <strong>Queima:</strong> até 40 horas<br>
+          <strong>Fragrância:</strong> Lavanda francesa + cedro<br>
+          <strong>Material:</strong> Cera vegetal, pavio de algodão<br>
+          <strong>Embalagem:</strong> Caixa com identidade visual Dage
+        </p>
+        <a href="#sacola" class="modal-add">Adicionar à sacola</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: Vanilla & Baunilha -->
+  <div class="modal-backdrop" id="modal-v2" role="dialog" aria-modal="true" aria-label="Vanilla & Baunilha">
+    <a href="#" class="modal-backdrop" style="position:fixed;inset:0;z-index:-1;" aria-label="Fechar modal"></a>
+    <div class="modal">
+      <a href="#" class="modal-close" aria-label="Fechar">×</a>
+      <div class="modal-img" style="background:#f5eee6;">
+        	<img src="src/images/vela_baunilha.png" alt="Uma vela em copo de vidro âmbar sobre uma prateleira de madeira rústica, ao lado de sua embalagem de papelão com design geométrico." />
+      </div>
+      <div class="modal-body">
+        <p class="modal-cat">Vela aromática · 150g</p>
+        <h2 class="modal-title">Vanilla &amp; Baunilha</h2>
+        <p class="modal-price">R$ 39,00</p>
+        <p class="modal-desc">Doce, quente e envolvente. A combinação de vanilla e baunilha cria um ambiente acolhedor com aroma que lembra sobremesas artesanais. Perfeita para a sala ou quarto.</p>
+        <p class="modal-detail">
+          <strong>Peso:</strong> 150g<br>
+          <strong>Queima:</strong> até 28 horas<br>
+          <strong>Fragrância:</strong> Vanilla + baunilha natural<br>
+          <strong>Material:</strong> Cera vegetal, pavio de algodão<br>
+          <strong>Embalagem:</strong> Caixa com identidade visual Dage
+        </p>
+        <a href="#sacola" class="modal-add">Adicionar à sacola</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: Eucalipto & Menta -->
+  <div class="modal-backdrop" id="modal-v3" role="dialog" aria-modal="true" aria-label="Eucalipto & Menta">
+    <a href="#" class="modal-backdrop" style="position:fixed;inset:0;z-index:-1;" aria-label="Fechar modal"></a>
+    <div class="modal">
+      <a href="#" class="modal-close" aria-label="Fechar">×</a>
+      <div class="modal-img" style="background:#eef2f0;">
+        	<img src="src/images/vela_eucalipto.png" alt="Uma vela aromática em um pote de cerâmica verde musgo, com rótulo minimalista da marca "dage"." />
+      </div>
+      <div class="modal-body">
+        <p class="modal-cat">Vela aromática · 150g</p>
+        <h2 class="modal-title">Eucalipto &amp; Menta</h2>
+        <p class="modal-price">R$ 39,00</p>
+        <p class="modal-desc">Refrescante e purificante. O eucalipto limpa o ar enquanto a menta desperta os sentidos. Ideal para home office ou ambientes de estudo e concentração.</p>
+        <p class="modal-detail">
+          <strong>Peso:</strong> 150g<br>
+          <strong>Queima:</strong> até 28 horas<br>
+          <strong>Fragrância:</strong> Eucalipto + menta fresca<br>
+          <strong>Material:</strong> Cera vegetal, pavio de algodão<br>
+          <strong>Embalagem:</strong> Caixa com identidade visual Dage
+        </p>
+        <a href="#sacola" class="modal-add">Adicionar à sacola</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: Corrida Azul -->
+  <div class="modal-backdrop" id="modal-a1" role="dialog" aria-modal="true" aria-label="Camiseta Corrida Azul">
+    <a href="#" class="modal-backdrop" style="position:fixed;inset:0;z-index:-1;" aria-label="Fechar modal"></a>
+    <div class="modal">
+      <a href="#" class="modal-close" aria-label="Fechar">×</a>
+      <div class="modal-img" style="background:#dce8f0;">
+        	<img src="src/images/camiseta_corrida_branca.png" alt="Camiseta branca com a estampa "DAGE CLUB alta pace" em tons de verde oliva e uma frase motivacional em letras menores." />
+      </div>
+      <div class="modal-body">
+        <p class="modal-cat">Camiseta · Running Club</p>
+        <h2 class="modal-title">Corrida Branca</h2>
+        <p class="modal-price">R$ 89,00</p>
+        <p class="modal-desc">A camisa oficial do clube de corrida Dage. Design leve, identidade visual exclusiva. Para quem corre com estilo e carrega a marca no peito literalmente.</p>
+        <p class="modal-detail">
+          <strong>Material:</strong> 100% poliéster dry-fit<br>
+          <strong>Tamanhos:</strong> P, M, G, GG<br>
+          <strong>Cor:</strong> Off White / impressão berde musgo<br>
+          <strong>Estampa:</strong> Serigrafia autoral Dage<br>
+          <strong>Produção:</strong> Sob encomenda, 7 dias úteis
+        </p>
+        <a href="#sacola" class="modal-add">Adicionar à sacola</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: Corrida Preta -->
+  <div class="modal-backdrop" id="modal-a2" role="dialog" aria-modal="true" aria-label="Camiseta Corrida Preta">
+    <a href="#" class="modal-backdrop" style="position:fixed;inset:0;z-index:-1;" aria-label="Fechar modal"></a>
+    <div class="modal">
+      <a href="#" class="modal-close" aria-label="Fechar">×</a>
+      <div class="modal-img" style="background:#2c2c2a;">
+        	<img src="src/images/camiseta_corrida_preta.png" alt="Uma camiseta preta com a palavra "DAGE" em letras grandes e rosa, acompanhada pelo subtítulo "ALTA PACE RUNNERS"." />
+      </div>
+      <div class="modal-body">
+        <p class="modal-cat">Camiseta · Running Club</p>
+        <h2 class="modal-title">Corrida Preta</h2>
+        <p class="modal-price">R$ 89,00</p>
+        <p class="modal-desc">Versão premium em preto com detalhe âmbar. Sobria, elegante, eficiente. Para os dias de treino ou para usar na rua com confiança.</p>
+        <p class="modal-detail">
+          <strong>Material:</strong> 100% poliéster dry-fit<br>
+          <strong>Tamanhos:</strong> P, M, G, GG<br>
+          <strong>Cor:</strong> Preto / detalhe âmbar<br>
+          <strong>Estampa:</strong> Serigrafia autoral Dage<br>
+          <strong>Produção:</strong> Sob encomenda, 7 dias úteis
+        </p>
+        <a href="#sacola" class="modal-add">Adicionar à sacola</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: Adesivos Dage -->
+  <div class="modal-backdrop" id="modal-a3" role="dialog" aria-modal="true" aria-label="Adesivos Dage">
+    <a href="#" class="modal-backdrop" style="position:fixed;inset:0;z-index:-1;" aria-label="Fechar modal"></a>
+    <div class="modal">
+      <a href="#" class="modal-close" aria-label="Fechar">×</a>
+      <div class="modal-img">
+        	<img src="src/images/adesivos.avif" alt="Cartela de adesivos em tons de rosa e vermelho com a frase "Jesus loves you!" (Jesus ama você) dentro de ilustrações de envelopes e corações." />
+      </div>
+      <div class="modal-body">
+        <p class="modal-cat">Adesivos · Pack com 3</p>
+        <h2 class="modal-title">Adesivos Dage</h2>
+        <p class="modal-price">R$ 18,00</p>
+        <p class="modal-desc">Pack com 3 adesivos de vinil com identidade visual Dage. Retangular lilás, oval creme e circular preto. Para personalizar cadernos, garrafinhas, mochilas e o que mais você quiser.</p>
+        <p class="modal-detail">
+          <strong>Quantidade:</strong> 3 adesivos por pack<br>
+          <strong>Material:</strong> Vinil fosco de alta qualidade<br>
+          <strong>Formatos:</strong> Retangular, oval, circular<br>
+          <strong>Durabilidade:</strong> Resistente à água e sol<br>
+          <strong>Tamanhos:</strong> 8cm, 7cm e 6cm (diâmetro)
+        </p>
+        <a href="#sacola" class="modal-add">Adicionar à sacola</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: Chaveiros -->
+  <div class="modal-backdrop" id="modal-a4" role="dialog" aria-modal="true" aria-label="Bucket Hat Dage">
+    <a href="#" class="modal-backdrop" style="position:fixed;inset:0;z-index:-1;" aria-label="Fechar modal"></a>
+    <div class="modal">
+      <a href="#" class="modal-close" aria-label="Fechar">×</a>
+      <div class="modal-img">
+        	<img src="src/images/chaveiros.jpg" alt="Diversos chaveiros de metal dourado com pingentes em formato de coração e gota, apresentando estampas de flores, animais e padrões abstratos." />
+      </div>
+      <div class="modal-body">
+        <p class="modal-cat">Acessório · Estilo</p>
+        <h2 class="modal-title">Chaveiro de Cerâmica Dage</h2>
+        <p class="modal-price">R$ 65,00</p>
+        <p class="modal-desc">Uma peça única para te acompanhar. Nosso chaveiro artesanal em cerâmica traz o charme e a identidade do clube Dage em cada detalhe. Perfeito para dar um toque autêntico às suas chaves, bolsa ou mochila, mostrando que você faz parte da nossa comunidade.</p>
+        <p class="modal-detail">
+          <strong>Material:</strong>Cerâmica esmaltada de alta qualidade com argola em metal.<br>
+          <strong>Design:</strong> Acabamento artesanal, com pintura detalhada e o logo Dage em destaque.<br>
+          <strong>Detalhes:</strong> Argola resistente para pendurar chaves e um delicado cordão de algodão trançado.<br>
+          <strong>Produção:</strong> Peça artesanal, feita à mão. Pode apresentar pequenas variações de forma e cor.<br>
+          <strong>Prazo:</strong> Sob encomenda, 10 dias úteis
+        </p>
+        <a href="#sacola" class="modal-add">Adicionar à sacola</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: Calendário -->
+  <div class="modal-backdrop" id="modal-p1" role="dialog" aria-modal="true" aria-label="Calendário Organizador 2025">
+    <a href="#" class="modal-backdrop" style="position:fixed;inset:0;z-index:-1;" aria-label="Fechar modal"></a>
+    <div class="modal">
+      <a href="#" class="modal-close" aria-label="Fechar">×</a>
+      <div class="modal-img" style="background:#eeedfd;">
+        	<img src="src/images/agenda.jpg" alt="Uma mão segurando cartões de um calendário ou agenda mensal, cada um com uma ilustração artística e colorida diferente." />
+      </div>
+      <div class="modal-body">
+        <p class="modal-cat">Papelaria · Calendário</p>
+        <h2 class="modal-title">Calendário Organizador 2025</h2>
+        <p class="modal-price">R$ 35,00</p>
+        <p class="modal-desc">Calendário de parede com design autoral Dage. Layout clean com espaço para anotações mensais. Uma peça decorativa que também organiza sua vida.</p>
+        <p class="modal-detail">
+          <strong>Formato:</strong> A3 (29,7 × 42 cm)<br>
+          <strong>Páginas:</strong> 12 meses + capa<br>
+          <strong>Papel:</strong> Couché 180g fosco<br>
+          <strong>Encadernação:</strong> Wire-o<br>
+          <strong>Entrega:</strong> Até 5 dias úteis
+        </p>
+        <a href="#sacola" class="modal-add">Adicionar à sacola</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: Bloco de Notas -->
+  <div class="modal-backdrop" id="modal-p2" role="dialog" aria-modal="true" aria-label="Bloco de Notas Dage">
+    <a href="#" class="modal-backdrop" style="position:fixed;inset:0;z-index:-1;" aria-label="Fechar modal"></a>
+    <div class="modal">
+      <a href="#" class="modal-close" aria-label="Fechar">×</a>
+      <div class="modal-img">
+        	<img src="src/images/bloco_de_anotacao.jpg" alt="Dois cadernos de anotações (planners) sobre uma mesa de madeira. Um tem capa amarela com flores e o outro é rosa com ilustrações de xícaras de café." />
+      </div>
+      <div class="modal-body">
+        <p class="modal-cat">Papelaria · Bloco</p>
+        <h2 class="modal-title">Bloco de Notas Dage</h2>
+        <p class="modal-price">R$ 22,00</p>
+        <p class="modal-desc">Bloco de notas com capa e contracapa em papel kraft com identidade visual Dage. Folhas pautadas, perfeitas para esboços, listas e ideias do dia a dia.</p>
+        <p class="modal-detail">
+          <strong>Formato:</strong> A5 (14,8 × 21 cm)<br>
+          <strong>Folhas:</strong> 50 páginas pautadas<br>
+          <strong>Papel:</strong> Offset 90g<br>
+          <strong>Capa:</strong> Kraft com impressão Dage<br>
+          <strong>Entrega:</strong> Até 5 dias úteis
+        </p>
+        <a href="#sacola" class="modal-add">Adicionar à sacola</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: Kit Cartão + Envelope -->
+  <div class="modal-backdrop" id="modal-p3" role="dialog" aria-modal="true" aria-label="Kit Cartão + Envelope">
+    <a href="#" class="modal-backdrop" style="position:fixed;inset:0;z-index:-1;" aria-label="Fechar modal"></a>
+    <div class="modal">
+      <a href="#" class="modal-close" aria-label="Fechar">×</a>
+      <div class="modal-img" style="background:#1a1917;">
+        	<img src="src/images/cartao_envelope.jpg" alt="Conjunto de papelaria fina com ilustrações botânicas (tulipas e flores brancas) em tons de verde e rosa suave." />
+      </div>
+      <div class="modal-body">
+        <p class="modal-cat">Papelaria · Kit</p>
+        <h2 class="modal-title">Kit Cartão + Envelope</h2>
+        <p class="modal-price">R$ 28,00</p>
+        <p class="modal-desc">Kit elegante com cartão duplex e envelope preto com lacre Dage. Para presentear com estilo ou usar como cartão de visita com uma identidade que ninguém esquece.</p>
+        <p class="modal-detail">
+          <strong>Conteúdo:</strong> 5 cartões + 5 envelopes<br>
+          <strong>Cartão:</strong> Duplex 350g, 10×15 cm<br>
+          <strong>Envelope:</strong> Offset preto com lacre âmbar<br>
+          <strong>Impressão:</strong> Offset + verniz localizado<br>
+          <strong>Entrega:</strong> Até 7 dias úteis
+        </p>
+        <a href="#sacola" class="modal-add">Adicionar à sacola</a>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ============================================================
+       MODAL SACOLA — painel lateral direito via :target
+       Conteúdo estático em HTML (sem JS para manipular itens).
+       Exibe todos os produtos disponíveis como itens pré-listados.
+  ============================================================ -->
+  <div id="sacola" role="dialog" aria-modal="true" aria-label="Sacola de compras">
+    <!-- Backdrop: clique fora fecha -->
+    <a href="#" style="position:fixed;inset:0;z-index:-1;" aria-label="Fechar sacola"></a>
+
+    <div class="sacola-panel">
+      <div class="sacola-header">
+        <h2 class="sacola-header-title">Sacola</h2>
+        <a href="#" class="sacola-close" aria-label="Fechar">×</a>
+      </div>
+
+      <div class="sacola-list">
+
+        <div class="sacola-item">
+          <div class="sacola-item-img">
+            	<img src="src/images/vela_lavanda.png" alt="Uma vela em pote lilás dentro de uma caixa de presente, decorada com ramos de lavanda seca e palitos de fósforo ao lado." />
+          </div>
+          <div class="sacola-item-info">
+            <p class="sacola-item-cat">Vela aromática</p>
+            <p class="sacola-item-name">Lavanda &amp; Cedro</p>
+            <p class="sacola-item-price">R$ 49,00</p>
+          </div>
+        </div>
+
+        <div class="sacola-item">
+          <div class="sacola-item-img">
+            <img src="src/images/camiseta_corrida_branca.png" alt="Camiseta branca com a estampa "DAGE CLUB alta pace" em tons de verde oliva e uma frase motivacional em letras menores." />
+          </div>
+          <div class="sacola-item-info">
+            <p class="sacola-item-cat">Camiseta · Running</p>
+            <p class="sacola-item-name">Corrida Branca</p>
+            <p class="sacola-item-price">R$ 89,00</p>
+          </div>
+        </div>
+
+        <div class="sacola-item">
+          <div class="sacola-item-img" style="background:#eeedfd;">
+            	<img src="src/images/agenda.jpg" alt="Uma mão segurando cartões de um calendário ou agenda mensal, cada um com uma ilustração artística e colorida diferente." />
+          </div>
+          <div class="sacola-item-info">
+            <p class="sacola-item-cat">Papelaria</p>
+            <p class="sacola-item-name">Calendário 2025</p>
+            <p class="sacola-item-price">R$ 35,00</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="sacola-footer">
+        <div class="sacola-total">
+          <span class="sacola-total-label">Total</span>
+          <span class="sacola-total-value">R$ 173,00</span>
+        </div>
+        <a href="#" class="sacola-checkout">Finalizar compra →</a>
+        <p class="sacola-note">Frete grátis acima de R$ 150 · Entrega em todo o Brasil</p>
+      </div>
+    </div>
+  </div>
+
+
+</body>
+</html>
