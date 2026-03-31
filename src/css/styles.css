@@ -1112,8 +1112,19 @@ footer {
 .modal-backdrop[aria-modal="true"]:target~.btn-topo {
   opacity: 0;
   pointer-events: none;
-  /* Impede que o usuário clique no botão invisível */
   transition: opacity 0.3s ease;
+}
+
+#sacola[aria-modal="true"]:target~.btn-topo {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+body:has(.modal-backdrop:target),
+body:has(#sacola:target) {
+  overflow: hidden;
+  padding-right: var(--scrollbar-width, 0px);
 }
 
 /* ============================================================
@@ -1286,5 +1297,48 @@ footer {
   /* Sacola: largura total no mobile */
   .sacola-panel {
     width: 100%;
+  }
+
+  body:has(#sacola:target) .nav-links-mobile,
+  body:has(.modal-backdrop:target) .nav-links-mobile {
+    display: none !important;
+  }
+
+  body:has(#sacola:target) .nav {
+    display: none !important;
+  }
+
+  .modal-backdrop {
+    padding-top: 80px;
+    padding-bottom: 20px;
+  }
+
+  .modal-backdrop .modal-img {
+    min-height: 60vh;
+    padding: 1rem;
+  }
+
+  .modal-backdrop .modal-body {
+    padding: 1.5rem;
+    /* Reduz o padding para ganhar espaço para o texto */
+  }
+
+  .modal-backdrop .modal-title {
+    font-size: 22px;
+    /* Diminui um pouco o título no mobile */
+  }
+
+  .modal-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 500;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--black);
+    color: var(--cream);
   }
 }
