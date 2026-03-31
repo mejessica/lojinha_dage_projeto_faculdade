@@ -90,6 +90,8 @@
     }
 
     /* Links: maiúsculas pequenas, espaçadas */
+    .nav-links-mobile { display: none; }
+
     .nav-links {
       display: flex;
       gap: 2rem;
@@ -1015,16 +1017,62 @@
        Reorganiza grids para coluna única ou 2 colunas.
     ============================================================ */
     @media (max-width: 768px) {
-
-      /* Nav: esconde links, mantém logo e sacola */
-      .nav { padding: 0 1.5rem; }
       .nav-links { display: none; }
+			
+			.nav {
+				position: fixed;
+				top: 0; left: 0; right: 0;
+				height: 64px;
+				padding: 0 1.5rem;
+				display: flex;
+				justify-content: space-between; 
+				align-items: center;
+				z-index: 1000;
+			}
 
-      /* Hero: empilha verticalmente */
-      .hero {
-        grid-template-columns: 1fr;
-        min-height: auto;
-      }
+			/* Esconde a lista de links original do desktop */
+			.nav-links {
+				display: none;
+			}
+
+			.nav-links-mobile {
+				display: flex;
+        width: 100vw;
+        list-style: none;
+        padding: 0;
+        background: #f5f2ec;
+        border-bottom: 1px solid var(--border);
+        position: absolute;
+        top: 64px; 
+        left: 0;
+			}
+
+			.nav-links-mobile li {
+				width: 100%;
+				border-bottom: 1px solid var(--border); 
+			}
+
+			.nav-links-mobile a {
+				display: block; 
+				width: 100%;
+				padding: 1.5rem 0.2rem;
+				text-align: center;
+				font-size: 12px;
+				letter-spacing: 0.2em;
+				color: var(--muted);
+				text-transform: uppercase;
+				text-decoration: none;
+				transition: background 0.2s;
+			}
+
+			.nav-links-mobile a:active {
+				background: rgba(0, 0, 0, 0.03);
+			}
+
+			.hero {
+				margin-top: calc(64px + 10px); 
+			}
+			
       .hero-text { padding: 3rem 1.5rem 2rem; }
       .hero-visual { min-height: 280px; }
 
